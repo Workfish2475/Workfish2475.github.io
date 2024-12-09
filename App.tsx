@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { TamaguiProvider } from "tamagui";
+import config from "./tamagui.config";
+import { YStack, View } from "tamagui";
 
-export default function App() {
+import { ScrollView } from "react-native";
+
+import NavBar from "./Components/NavBar";
+import HeaderSection from "./Components/Header";
+import ProjectItem from "./Components/ProjectItem";
+import ContactSection from "./Components/Contact";
+import AboutMe from "./Components/AboutMe";
+import { useState } from "react";
+
+export default () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = (event: any) => {
+    const yOffset = event.nativeEvent.contentOffset.y;
+    setScrollY(yOffset);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <TamaguiProvider config={config}>
+      <View backgroundColor="#FFFFFF" style={{flex: 1, height: "auto"}} gap="$2">
+        <NavBar scrollY={scrollY} />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+        <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, height: "auto" }} onScroll={handleScroll} scrollEventThrottle={16}>
+          <YStack gap="$5">
+            <HeaderSection />
+            <ProjectItem />
+            <AboutMe />
+            <ContactSection />
+          </YStack>
+        </ScrollView>
+      </View>
+    </TamaguiProvider>
+  );
+};
