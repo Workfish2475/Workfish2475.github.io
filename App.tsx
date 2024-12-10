@@ -21,7 +21,7 @@ export default () => {
 
   return (
     <TamaguiProvider config={config}>
-      <View backgroundColor="#FFFFFF" style={{flex: 1, height: "auto"}} gap="$2">
+      <View backgroundColor="$color" style={{flex: 1, height: "auto"}} gap="$2">
         <NavBar scrollY={scrollY} />
 
         <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, height: "auto" }} onScroll={handleScroll} scrollEventThrottle={16}>

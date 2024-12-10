@@ -2,7 +2,7 @@ import { XStack, YStack, Card, H1, Paragraph, Separator } from "tamagui";
 
 export default function AboutMe() {
   return (
-    <Card backgroundColor="$color" width="95%" alignSelf="center" elevate bordered>
+    <Card backgroundColor="#0F52BA" width="95%" alignSelf="center" elevate bordered borderColor="#1B1B1B">
       <Card.Header>
         <YStack gap="$5">
           <H1 color="linen">About Me</H1>

@@ -6,7 +6,10 @@ import {
   H1,
   Image,
   Separator,
+  Text
 } from "tamagui";
+
+import { BlurView } from 'expo-blur'
 
 export default function HeaderSection() {
   return (
@@ -16,24 +19,25 @@ export default function HeaderSection() {
       justifyContent="center"
       alignItems="center"
       alignSelf="center"
-      backgroundColor="$color"
+      backgroundColor="#0F52BA"
       width="95%"
       minHeight="40%"
       elevation={3}
       bordered
+      borderColor="#1B1B1B"
+      mt="$4"
     >
       <YStack fullscreen alignItems="center" justifyContent="center">
         <H1 color="linen" textAlign="center" alignSelf="center">
           Alexander Rivera
         </H1>
-
         <Paragraph
           fontWeight="800"
           color="linen"
           textAlign="center"
           alignSelf="center"
         >
-          Placeholder text
+          Recent graduate seeking opportunities. 
         </Paragraph>
       </YStack>
       <Card.Background>

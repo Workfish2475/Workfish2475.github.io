@@ -45,7 +45,7 @@ export default function ProjectItem() {
       alignSelf="center"
       borderRadius="$4"
       height="50%"
-      justifyContent="space-around"
+      justifyContent="space-between"
       flexWrap="wrap"
     >
       {projects.map((project, index) => (

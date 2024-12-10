@@ -1,11 +1,10 @@
 import { Button, XStack, XGroup, Anchor } from "tamagui";
-import { BlurView } from "@react-native-community/blur";
 import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function NavBar({ scrollY }) {
-  const navHeight: number = Math.max(50, 75 - scrollY);
+  const navHeight: number = Math.max(60, 75 - scrollY);
 
   return (
     <XStack
@@ -25,7 +24,7 @@ export default function NavBar({ scrollY }) {
       <Button
         theme="active"
         color="linen"
-        chromeless
+        backgroundColor="#0F52BA"
         fontWeight={"bold"}
         hoverStyle={{ scale: 1.05 }}
         icon={<Entypo name="home" size={24} color="linen" />}
@@ -35,10 +34,11 @@ export default function NavBar({ scrollY }) {
       <XGroup alignItems="center">
         <XGroup.Item>
           <Button
-            theme="light"
+            backgroundColor="#0F52BA"
             fontWeight={"bold"}
             hoverStyle={{ scale: 1.05 }}
-            icon={<FontAwesome6 name="hammer" size={24} color="black" />}
+            icon={<FontAwesome6 name="hammer" size={24} color="linen" />}
+            color="linen"
           >
             Projects
           </Button>
@@ -46,15 +46,17 @@ export default function NavBar({ scrollY }) {
 
         <XGroup.Item>
           <Button
-            theme="light"
+            backgroundColor="#0F52BA"
             fontWeight={"bold"}
             hoverStyle={{ scale: 1.05 }}
-            icon={<Ionicons name="person" size={24} color="black" />}
+            icon={<Ionicons name="person" size={24} color="linen" />}
+            color="linen"
           >
             <Anchor
               href="https://github.com/Workfish2475"
               textDecorationLine="none"
               fontWeight={"bold"}
+              color="linen"
             >
               About Me
             </Anchor>
@@ -63,25 +65,28 @@ export default function NavBar({ scrollY }) {
 
         <XGroup.Item>
           <Button
-            theme="light"
+            backgroundColor="#0F52BA"
             fontWeight={"bold"}
             hoverStyle={{ scale: 1.05 }}
-            icon={<FontAwesome6 name="contact-book" size={24} color="black" />}
+            icon={<FontAwesome6 name="contact-book" size={24} color="linen" />}
+            color="linen"
           >
             Contact Me
           </Button>
         </XGroup.Item>
         <XGroup.Item>
           <Button
-            theme="light"
+            backgroundColor="#0F52BA"
             fontWeight={"bold"}
             hoverStyle={{ scale: 1.05 }}
-            icon={<Entypo name="github" size={24} color="black" />}
+            icon={<Entypo name="github" size={24} color="linen" />}
+            color="linen"
           >
             <Anchor
               href="https://github.com/Workfish2475"
               textDecorationLine="none"
               fontWeight={"bold"}
+              color="linen"
             >
               Github
             </Anchor>
