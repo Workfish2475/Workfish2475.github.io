@@ -6,10 +6,10 @@ import {
   H1,
   Image,
   Separator,
-  Text
+  Text,
 } from "tamagui";
 
-import { BlurView } from 'expo-blur'
+import { BlurView } from "expo-blur";
 
 export default function HeaderSection() {
   return (
@@ -37,7 +37,7 @@ export default function HeaderSection() {
           textAlign="center"
           alignSelf="center"
         >
-          Recent graduate seeking opportunities. 
+          Placeholder text.
         </Paragraph>
       </YStack>
       <Card.Background>

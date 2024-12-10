@@ -3,8 +3,18 @@ import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-export default function NavBar({ scrollY }) {
+export default function NavBar({ scrollY, onScrollTo, sectionPositions }) {
   const navHeight: number = Math.max(60, 75 - scrollY);
+
+  const scrollToSection = (sectionName: keyof typeof sectionPositions) => {
+    const offset = 75;
+
+    if (sectionPositions[sectionName] === "header") {
+      onScrollTo(0);
+    } else {
+      onScrollTo(sectionPositions[sectionName]);
+    }
+  };
 
   return (
     <XStack
@@ -26,8 +36,9 @@ export default function NavBar({ scrollY }) {
         color="linen"
         backgroundColor="#0F52BA"
         fontWeight={"bold"}
-        hoverStyle={{ scale: 1.05 }}
+        hoverStyle={{ backgroundColor: "#0D4393", borderColor: "#0D4393" }}
         icon={<Entypo name="home" size={24} color="linen" />}
+        onPress={() => scrollToSection("headerSection")}
       >
         <Anchor href="http://localhost:8081" textDecorationLine="none"></Anchor>
       </Button>
@@ -36,9 +47,10 @@ export default function NavBar({ scrollY }) {
           <Button
             backgroundColor="#0F52BA"
             fontWeight={"bold"}
-            hoverStyle={{ scale: 1.05 }}
+            hoverStyle={{ backgroundColor: "#0D4393", borderColor: "#0D4393" }}
             icon={<FontAwesome6 name="hammer" size={24} color="linen" />}
             color="linen"
+            onPress={() => scrollToSection("projectItem")}
           >
             Projects
           </Button>
@@ -48,12 +60,13 @@ export default function NavBar({ scrollY }) {
           <Button
             backgroundColor="#0F52BA"
             fontWeight={"bold"}
-            hoverStyle={{ scale: 1.05 }}
+            hoverStyle={{ backgroundColor: "#0D4393", borderColor: "#0D4393" }}
             icon={<Ionicons name="person" size={24} color="linen" />}
             color="linen"
+            onPress={() => scrollToSection("aboutMe")}
           >
             <Anchor
-              href="https://github.com/Workfish2475"
+              // href=""
               textDecorationLine="none"
               fontWeight={"bold"}
               color="linen"
@@ -67,9 +80,10 @@ export default function NavBar({ scrollY }) {
           <Button
             backgroundColor="#0F52BA"
             fontWeight={"bold"}
-            hoverStyle={{ scale: 1.05 }}
+            hoverStyle={{ backgroundColor: "#0D4393", borderColor: "#0D4393" }}
             icon={<FontAwesome6 name="contact-book" size={24} color="linen" />}
             color="linen"
+            onPress={() => scrollToSection("contactSection")}
           >
             Contact Me
           </Button>
@@ -78,7 +92,7 @@ export default function NavBar({ scrollY }) {
           <Button
             backgroundColor="#0F52BA"
             fontWeight={"bold"}
-            hoverStyle={{ scale: 1.05 }}
+            hoverStyle={{ backgroundColor: "#0D4393", borderColor: "#0D4393" }}
             icon={<Entypo name="github" size={24} color="linen" />}
             color="linen"
           >

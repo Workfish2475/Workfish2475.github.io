@@ -31,13 +31,14 @@ const projects = [
   {
     title: "Pomo",
     languages: ["Kotlin"],
-    description: "Minimalistic Pomodoro app made using Kotlin Compose. Allows for the user to input session goals, and even offers insights after a certain amount of sessions have been completed.",
+    description:
+      "Minimalistic Pomodoro app made using Kotlin Compose. Allows for the user to input session goals, and even offers insights after a certain amount of sessions have been completed.",
     imageURL: "/path/to/project/img.png.",
     link: "https://github.com/alenrtan/Pomo",
-  }
+  },
 ];
 
-export default function ProjectItem() {
+export default function ProjectItem({ onLayout }) {
   return (
     <XStack
       backgroundColor="$color"
@@ -47,6 +48,7 @@ export default function ProjectItem() {
       height="50%"
       justifyContent="space-between"
       flexWrap="wrap"
+      onLayout={onLayout}
     >
       {projects.map((project, index) => (
         <Card
@@ -64,7 +66,9 @@ export default function ProjectItem() {
           <Card.Header padded>
             <YStack gap="$4">
               <H1 color="linen">{project.title}</H1>
-              <H5 color="linen" numberOfLines={2}>{project.description}</H5>
+              <H5 color="linen" numberOfLines={2}>
+                {project.description}
+              </H5>
 
               <XStack
                 backgroundColor="#0070BB"
