@@ -4,7 +4,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 export default function ContactSection({ onLayout }) {
   return (
     <YStack onLayout={onLayout}>
-      <Card backgroundColor="$color" width="95%" alignSelf="center" mb="$4">
+      <Card backgroundColor="rgba(255, 255, 255, 0.1)" width="95%" alignSelf="center" mb="$4">
         <Card.Header>
           <YStack gap="$5">
             <XStack display="flex" justifyContent="space-between">

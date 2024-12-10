@@ -1,4 +1,4 @@
-import { Button, XStack, XGroup, Anchor } from "tamagui";
+import { Button, XStack, XGroup, Anchor, useMedia } from "tamagui";
 import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -16,9 +16,11 @@ export default function NavBar({ scrollY, onScrollTo, sectionPositions }) {
     }
   };
 
+  const media = useMedia();
+
   return (
     <XStack
-      width="95%"
+      width={"95%"}
       height={navHeight}
       padding="$2"
       alignSelf="center"
