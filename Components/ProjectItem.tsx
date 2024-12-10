@@ -3,7 +3,6 @@ import {
   XStack,
   YStack,
   H1,
-  H5,
   Text,
   Image,
   Button,
