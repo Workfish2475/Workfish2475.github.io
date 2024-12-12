@@ -22,6 +22,7 @@ export default function NavBar({ scrollY, onScrollTo, sectionPositions }) {
     <XStack
       width={"95%"}
       height={navHeight}
+      maxHeight={75}
       padding="$2"
       alignSelf="center"
       gap="$5"
@@ -42,7 +43,7 @@ export default function NavBar({ scrollY, onScrollTo, sectionPositions }) {
         icon={<Entypo name="home" size={24} color="linen" />}
         onPress={() => scrollToSection("headerSection")}
       >
-        <Anchor href="http://localhost:8081" textDecorationLine="none"></Anchor>
+        Home
       </Button>
       <XGroup alignItems="center">
         <XGroup.Item>

@@ -30,6 +30,7 @@ const projects = [
       "A web scraper made using Selenium and BS4 that scrapes and organizes card date into a json, then proceeds to download the entire collection of card images using multithreading to do so quickly",
     imageURL: "/path/to/project/img.png.",
     link: "https://github.com/Workfish2475/WebScraper",
+    siteLink: "something",
   },
   {
     title: "Pomo",
@@ -38,15 +39,16 @@ const projects = [
       "Minimalistic Pomodoro app made using Kotlin Compose. Allows for the user to input session goals, and even offers insights after a certain amount of sessions have been completed.",
     imageURL: "/path/to/project/img.png.",
     link: "https://github.com/alenrtan/Pomo",
+    siteLink: "something",
   },
 ];
 
-export default function ProjectItem({ onLayout }) {
+export default function ProjectItem({ onLayout, navigationItem }) {
   return (
     <Card
       padded
       width="95%"
-      height={"55%"}
+      // height={"55%"}
       alignSelf="center"
       backgroundColor="rgba(255, 255, 255, 0.1)"
       elevate
@@ -67,7 +69,7 @@ export default function ProjectItem({ onLayout }) {
             borderRadius="$4"
             justifyContent="space-between"
             flexWrap="wrap"
-            height={"100%"}
+            // height={"100%"}
           >
             {projects.map((project, index) => (
               <Card
@@ -120,7 +122,7 @@ export default function ProjectItem({ onLayout }) {
                 <Card.Background>
                   <Image />
                 </Card.Background>
-                <Card.Footer>
+                <Card.Footer gap="$2" flexGrow={1}>
                   <Button
                     fontWeight="bold"
                     icon={<Entypo name="github" size={24} color="black" />}
@@ -133,6 +135,12 @@ export default function ProjectItem({ onLayout }) {
                       Github
                     </Anchor>
                   </Button>
+
+                  {project.siteLink && (
+                    <Button fontWeight="bold" onPress={() => navigationItem.navigate('ProjectPage')}>
+                      Page
+                    </Button>
+                  )}
                 </Card.Footer>
               </Card>
             ))}

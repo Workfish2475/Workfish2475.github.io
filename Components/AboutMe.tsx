@@ -21,10 +21,20 @@ export default function AboutMe({ onLayout }) {
             flexDirection="row"
             alignSelf="center"
             justifyContent="space-around"
-            width="100%"
           >
             <Paragraph color="linen" fontWeight="bold">
               Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
+              text Placeholder text Placeholder text Placeholder text Placeholder
               text
             </Paragraph>
 

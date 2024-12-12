@@ -25,7 +25,7 @@ export default function ContactSection({ onLayout }) {
             <YStack>
               <XStack gap="$2" alignContent="center">
                 <H3 color="linen">Discord</H3>
-                <H3 color="gray">@username</H3>
+                <H3 color="gray">Workfish2475</H3>
               </XStack>
               <XStack gap="$2">
                 <H3 color="linen">Linkedin</H3>
@@ -33,7 +33,7 @@ export default function ContactSection({ onLayout }) {
               </XStack>
               <XStack gap="$2">
                 <H3 color="linen">Email</H3>
-                <H3 color="gray">example@example.com</H3>
+                <H3 color="gray">Alex2475@nmsu.edu</H3>
               </XStack>
             </YStack>
           </YStack>
